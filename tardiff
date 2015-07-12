@@ -7,7 +7,7 @@
 
 if [ $# -ne 2 ]
 then
-    printf 'Usage: %s <tar1> <tar2>\n' "$0"
+    printf 'Usage: %s <tar1> <tar2>\n' "$0" >&2
     exit 1
 fi
 
