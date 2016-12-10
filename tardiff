@@ -15,7 +15,7 @@ set -e
 
 tar1="$1"
 tar2="$2"
-tmpdir=$(mktemp -t -d)
+tmpdir=$(mktemp -t -d tardiff.XXXXXX)
 base1=$(basename "$tar1")
 base2=$(basename "$tar2")
 mkdir -p "$tmpdir/a/$base1/"
