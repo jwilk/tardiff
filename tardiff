@@ -1,9 +1,7 @@
 #!/bin/sh
 
-# Copyright © 2011-2016 Jakub Wilk <jwilk@jwilk.net>
-
-# Redistribution and use in source and compiled forms, with or without
-# modification, are permitted under any circumstances. No warranty.
+# Copyright © 2011-2018 Jakub Wilk <jwilk@jwilk.net>
+# SPDX-License-Identifier: MIT
 
 if [ $# -ne 2 ]
 then
