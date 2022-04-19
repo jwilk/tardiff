@@ -14,8 +14,8 @@ set -e
 tar1="$1"
 tar2="$2"
 tmpdir=$(mktemp -t -d tardiff.XXXXXX)
-base1=$(basename "$tar1")
-base2=$(basename "$tar2")
+base1=${tar1##*/}
+base2=${tar2##*/}
 mkdir -p "$tmpdir/a/$base1/"
 mkdir -p "$tmpdir/b/$base2/"
 tar -xvvf "$tar1" -C "$tmpdir/a/$base1/" | LC_ALL=C sort -k6 > "$tmpdir/a/${base1}.list"
