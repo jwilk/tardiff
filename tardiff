@@ -21,7 +21,7 @@ mkdir -p "$tmpdir/b/$base2/"
 tar -xvvf "$tar1" -C "$tmpdir/a/$base1/" | LC_ALL=C sort -k6 > "$tmpdir/a/${base1}.list"
 tar -xvvf "$tar2" -C "$tmpdir/b/$base2/" | LC_ALL=C sort -k6 > "$tmpdir/b/${base2}.list"
 cd "$tmpdir"
-if [ $(ls "a/$base1/" | wc -l) -eq 1 ] && [ $(ls "b/$base2/" | wc -l) -eq 1 ]
+if [ $(ls -Aq "a/$base1/" | wc -l) -eq 1 ] && [ $(ls -Aq "b/$base2/" | wc -l) -eq 1 ]
 then
     mv "a/$base1/"* "a/$base1/*"
     mv "b/$base2/"* "b/$base2/*"
