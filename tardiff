@@ -26,7 +26,7 @@ if [ $(ls -Aq "a/$base1/" | wc -l) -eq 1 ] && [ $(ls -Aq "b/$base2/" | wc -l) -e
 then
     mv "a/$base1/"* "a/$base1/*"
     mv "b/$base2/"* "b/$base2/*"
-    sed -i -E -e 's,(([^ ]+ +){5})([^/]*),\1*,' \
+    sed -i -E -e 's,^(([^ ]+ +){5})([^/]*),\1*,' \
         "a/$base1.list" \
         "b/$base2.list"
 fi
