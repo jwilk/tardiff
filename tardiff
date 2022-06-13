@@ -5,7 +5,7 @@
 
 if [ $# -ne 2 ]
 then
-    printf 'Usage: %s <tar1> <tar2>\n' "$0" >&2
+    printf 'Usage: %s TAR-FILE-1 TAR-FILE-2\n' "$0" >&2
     exit 1
 fi
 
